@@ -1,6 +1,6 @@
 
 import reelOnevideo from "/videos/reel/r1.mp4"
-import reelOne from "@assets/banner/reelone.png"
+import reelOne from "../../assets/banner/reelOne.png"
 
 export const ReelVideo = () => {
 
