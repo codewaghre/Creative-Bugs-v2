@@ -1,0 +1,210 @@
+/* Main Root Colors  */
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Backgrounds */
+    --bg-primary: hsl(0 0% 100%);
+    --bg-secondary: hsl(210 20% 98%);
+    --bg-black: hsl(0 0% 0%);
+    --bg-blue: hsl(240 67% 96%);
+    --bg-green: hsl(127 100% 90% / 0.25);
+
+    /* Text colors */
+    --text-primary: hsl(0 0% 13%);
+    --text-secondary: hsl(339 10% 46%);
+
+    /* Headings */
+    --text-head-1: hsl(7 84% 67%);
+    --text-head-2: hsl(255 36% 38%);
+
+    /* Whites */
+    --text-white: hsl(0 0% 100%);
+    --text-white-50: hsl(0 0% 100% / 0.5);
+
+    /* Primary Button */
+    --btn-primary-bg: hsl(0 0% 13%);
+    --btn-primary-text: hsl(0 0% 100%);
+
+    /* Secondary Button (reverse of primary) */
+    --btn-secondary-bg: hsl(0 0% 100%);
+    --btn-secondary-text: hsl(0 0% 13%);
+
+    /* Border */
+    --border-default: hsl(255 23% 93%);
+
+    /* Color Palette One (Purple scale) */
+    --color-palette-1: hsl(251 66% 67%);
+    --color-palette-2: hsl(247 70% 75%);
+    --color-palette-3: hsl(244 69% 82%);
+    --color-palette-4: hsl(243 63% 88%);
+    --color-palette-5: hsl(240 60% 97%);
+
+
+    /* Icons */
+    --icon-primary: hsl(240 1% 52%);
+    --icon-secondary: hsl(240 1% 61%);
+
+    /* Special icons / states */
+    --icon-quote: hsl(0 0% 13%);
+    --icon-online: hsl(142 100% 33%);
+    --icon-heart: hsl(0 100% 46%);
+
+
+    /* Logo – foreground layers */
+    --logo-primary: hsl(0 0% 0%);
+    --logo-secondary: hsl(0 0% 19%);
+    --logo-muted: hsl(210 18% 8% / 0.5);
+
+    /* Logo – background */
+    --logo-surface: hsl(210 20% 98%);
+
+    /* Linears */
+    --linear-1: linear-gradient(to bottom,
+            hsl(0 0% 100%) 20%,
+            hsl(210 20% 98%) 100%);
+
+    --linear-2: linear-gradient(to top,
+            hsl(0 0% 100%) 20%,
+            hsl(240 60% 97%)100%);
+
+    --linear-3: linear-gradient(to right,
+            hsl(0 0% 100%) 0%,
+            hsl(240, 64%, 96%) 80%);
+
+
+
+}
+
+@import "tailwindcss";
+
+
+@theme inline {
+
+    /* background */
+    --color-bg-primary: var(--bg-primary);
+    --color-bg-secondary: var(--bg-secondary);
+    --color-bg-black: var(--bg-black);
+    --color-bg-blue: var(--bg-blue);
+    --color-bg-green: var(--bg-green);
+
+    /* Text colors */
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+
+    /* Headings */
+    --color-text-head-one: var(--text-head-1);
+    --color-text-head-two: var(--text-head-2);
+
+    /* Whites */
+    --color-text-white: var(--text-white);
+    --color-text-white-50: var(--text-white-50);
+
+    /* Primary Button */
+    --color-btn-primary-bg: var(--btn-primary-bg);
+    --color-btn-primary-text: var(--btn-primary-text);
+
+    /* Secondary Button (reverse of primary) */
+    --color-btn-secondary-bg: var(--btn-secondary-bg);
+    --color-btn-secondary-text: var(--btn-secondary-text);
+
+    /* Border */
+    --color-border-default: var(--border-default);
+    --color-border-green: var(--icon-online);
+
+
+    /* linears */
+    --bg-surface-gradient-1: var(--linear-1);
+    --bg-surface-gradient-2: var(--linear-2);
+
+    /* Purple palette */
+    --color-purple-500: var(--color-palette-1);
+    --color-purple-400: var(--color-palette-2);
+    --color-purple-300: var(--color-palette-3);
+    --color-purple-200: var(--color-palette-4);
+    --color-purple-100: var(--color-palette-5);
+
+
+    /* Special icons / states */
+    --color-icon-quote: var(--icon-quote);
+    --color-icon-online: var(--icon-online);
+    --color-icon-heart: var(--icon-heart);
+
+
+    /* Navbar Brekpoints */
+    --breakpoint-nav-sm: 320px;
+    --breakpoint-nav-md: 375px;
+    --breakpoint-nav-lg: 550px;
+
+    /* card brakpoint */
+    --breakpoint-card-sm: 320px;
+    --breakpoint-card-md: 700px;
+    --breakpoint-card-lg: 1150px;
+
+
+    /* Breakpoints 425px, 786px, 1024px */
+    --breakpoint-sm: 320px;
+    --breakpoint-md: 375px;
+    --breakpoint-lg: 425px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-laptop: 1024px;
+
+
+
+    --animate-orbit: orbit var(--duration) linear infinite;
+
+    --animate-shine: shine 2s infinite;
+
+    @keyframes orbit {
+        0% {
+            transform: rotate(0deg) translateX(var(--radius));
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(var(--radius));
+        }
+    }
+
+    @keyframes shine {
+        0%: {
+            left: "-75%"
+        }
+
+        100%: {
+            left: "125%"
+        }
+    }
+
+
+
+
+
+
+
+
+    /* linears */
+    --bg-surface-gradient-1: var(--linear-1);
+    --bg-surface-gradient-2: var(--linear-2);
+}
+
+
+
+@layer utilities {
+    .bg-surface-gradient-one {
+        background: var(--linear-1);
+    }
+
+    .bg-surface-gradient-2 {
+        background: var(--linear-2);
+    }
+
+    .bg-surface-gradient-3 {
+        background: var(--linear-3);
+    }
+
+
+
+}
