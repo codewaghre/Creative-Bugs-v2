@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
 
+    "ignoreDeprecations": "5.0",
     "paths": {
       "@/*": ["./src/*"],
       "@common/*": ["./src/common/*"],
