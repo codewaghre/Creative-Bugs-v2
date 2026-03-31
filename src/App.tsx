@@ -32,8 +32,6 @@ function App() {
 
   return (
     <>
-
-
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
