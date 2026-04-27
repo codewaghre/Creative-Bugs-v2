@@ -10,6 +10,11 @@ export { bannerCardsData } from "./ContactSection";
 
 export { AboutData } from "./AboutSection";
 
-export { statsCards } from "./GrowthSection";
+export {
+  statsCards,
+  BrandContentData,
+  FeatureListData,
+  ServiceContentColoBoxData,
+} from "./GrowthSection";
 
 export { timelineData } from "@/data/WorkflowSection";

@@ -1,9 +1,9 @@
-import { BrandContentData } from "@/data/index"
 
 import { BannerHeading } from "@components/Common/BannerHeading"
 import { BannerConentContainer, BannerContainer, BannerHeadingContainer } from "@components/Common/index"
 
 import { cn } from "@/lib/cn"
+import { BrandContentData } from "@/data/GrowthSection"
 
 
 export const BrandContent = () => {
