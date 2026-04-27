@@ -1,5 +1,5 @@
 import { Logo, LoveIcon, OnlineIcon } from "@/assets"
-import { Button, LogoContainer } from "@/components/Common"
+import { Button, CarbonBadge, LogoContainer } from "@/components/Common"
 import { cn } from "@/lib/cn"
 import { Link } from "react-router-dom"
 
@@ -44,6 +44,10 @@ export const Footer = () => {
                                     iconPosition="start"
                                 />
                             </Link>
+                        </div>
+
+                        <div>
+                            <CarbonBadge />
                         </div>
 
 

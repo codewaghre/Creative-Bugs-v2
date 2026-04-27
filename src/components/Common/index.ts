@@ -1,3 +1,5 @@
+export { CarbonBadge } from "@components/Common/CarbonBadge";
+
 export { AskQuestionForm } from "@components/Common/AskQuestionForm";
 export { BookAMeetingFrom } from "@components/Common/BookAMeetingFrom";
 
