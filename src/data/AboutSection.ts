@@ -50,7 +50,7 @@ export const AboutData: FooterData = {
       id: 3,
       name: "Email",
       value: "ops.creativebugs@gmail.com",
-      to: "mailto:ops.creativebugs@gmail.com",
+      to: "https://mail.google.com/mail/?view=cm&fs=1&to=ops.creativebugs@gmail.com",
       type: "email",
     },
   ],

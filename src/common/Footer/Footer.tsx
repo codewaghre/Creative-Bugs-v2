@@ -85,7 +85,7 @@ export const Footer = () => {
                         <ul className="flex flex-col text-text-white-50 items-start gap-6 text-xs card-md:text-sm card-lg:text-base">
                             <li>
                                 <Link
-                                    to={"/https://www.linkedin.com/company/creative-bugs-media/"}
+                                    to="https://www.linkedin.com/company/creative-bugs-media/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="LinkedIn opens in new tab"
@@ -96,7 +96,7 @@ export const Footer = () => {
 
                             <li>
                                 <Link
-                                    to={"/https://instagram.com/creativebugs.media"}
+                                    to="https://www.instagram.com/creativebugs.media/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Instagram opens in new tab"
@@ -144,7 +144,7 @@ export const Footer = () => {
                         <ul className="flex flex-col text-text-white-50 items-start gap-6 text-xs card-md:text-sm card-lg:text-base">
                             <li><Link to="/bookameetingform" target="_blank">Book a meeting</Link></li>
                             <li><Link to="/contactform" target="_blank">Ask a question</Link></li>
-                            <li><Link to="mailto:ops.creativebugs@gmail.com" target="_blank">Email</Link></li>
+                            <li><Link to="https://mail.google.com/mail/?view=cm&fs=1&to=ops.creativebugs@gmail.com" target="_blank">Email</Link></li>
                         </ul>
                     </nav>
 
