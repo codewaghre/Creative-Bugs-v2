@@ -1,8 +1,6 @@
-import { MainContentContainer } from "@/components/Common"
-import { WorkHome } from "@pages/index"
-import { Clients } from "./Sections/Clients"
 
-
+import { MainContentContainer } from "@/components/Common/index"
+import { WorkHome, Clients } from "@pages/index"
 
 export const Work = () => {
     return (

@@ -17,7 +17,7 @@ export const LogoContainer = ({ children }: ContainerProps) => {
 export const NavLinksContainer = ({ children }: ContainerProps) => {
 
     return (
-        <div className={cn("realtive flex items-center justify-center gap-4 text-sm text-text-secondary")}>
+        <div className={cn("realtive flex items-center justify-end gap-4 text-sm text-text-secondary")}>
             {children}
         </div>
     )
@@ -45,6 +45,8 @@ export const NavbarContainer = ({ children }: ContainerProps) => {
         <>
             <NavbarMainContainer>
                 <motion.nav
+                    role="navigation"
+                    aria-label="Main navigation"
                     initial={{ opacity: 0, y: -12, filter: 'blur(1px)' }}
                     animate={{
                         opacity: 1,
@@ -52,7 +54,7 @@ export const NavbarContainer = ({ children }: ContainerProps) => {
                         filter: 'blur(0px)',
                     }}
                     transition={{ duration: 0.3, }}
-                    className="bg-bg-primary flex items-center justify-between gap-20 border-x border-b border-border-default px-2 py-3 nav-lg:px-4 nav-lg:py-2">
+                    className="bg-bg-primary flex items-center justify-between gap-40 border-x border-b border-border-default px-2 py-3 nav-lg:px-4 nav-lg:py-2">
                     {children}
                 </motion.nav>
             </NavbarMainContainer>
@@ -94,7 +96,10 @@ export const CardContainer = ({ children, className }: ContainerProps) => {
 
     return (
         <>
-            <div className={cn("", className)}>
+            <div
+                role="list"
+                aria-label="Company performance statistics"
+                className={cn("", className)}>
                 {children}
             </div>
         </>
@@ -107,6 +112,8 @@ export const CardContentContainer = ({ children, className }: ContainerProps) =>
     return (
         <>
             <motion.div
+                role="group"
+                tabIndex={0}
                 initial={{ opacity: 0, y: 20, filter: "blur(2px)" }}
                 whileInView={{
                     opacity: 1,

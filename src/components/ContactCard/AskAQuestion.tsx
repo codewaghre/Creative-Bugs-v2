@@ -1,8 +1,8 @@
 import { cn } from "@/lib/cn"
 
 import type { FeatureItem } from "@/data/data.type";
-import { BannerConentContainer } from "@components/Common";
-import { CardButton } from "@components/Common";
+import { BannerConentContainer, CardButton } from "@components/Common/index";
+
 
 import { motion, type Variants } from "motion/react";
 
@@ -23,7 +23,6 @@ const fadeUpVariant: Variants = {
 export const AskAQuestion = ({ featuresQuestiondata }: Props) => {
     return (
         <BannerConentContainer>
-
             <div className="relative h-100 overflow-hidden">
 
                 <div className="absolute top-4 left-1/2 -translate-x-1/2 w-full z-40">

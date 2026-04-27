@@ -1,30 +1,24 @@
 
-import { BannerContainer, Button, CardContainer, CardContentContainer, Heading, HeadingContentContainer, TopCornorBox } from "@/components/Common"
-import { AskAQuestion, BookAMeeting } from "@/components/ContactCard"
-import { AskAQuestionData, BookAMeetingData } from "@/data/ContactSection"
 import { cn } from "@/lib/cn"
 import { Link } from "react-router-dom"
 
+
+import { BannerContainer, Button, CardContainer, CardContentContainer, Heading, HeadingContentContainer, TopCornorBox } from "@/components/Common/index"
+
+import { AskAQuestion, BookAMeeting } from "@/components/ContactCard/index"
+import { bannerCardsData } from "@/data/index"
 
 
 
 export const Contact = () => {
 
-
-    const { features, head, cta } = BookAMeetingData
-
-    const { features: askFeatures, head: askHead, cta: askCta } = AskAQuestionData
-
-
-
-
     return (
-        <div className={cn("border-t border-x border-border-default relative")}>
+        <section id="contact" className={cn("border-t border-x border-border-default relative")}>
 
             <HeadingContentContainer>
                 <Heading
                     heading="Connect With Us"
-                    paragraph="Connect with Creative Bugs Media to craft visually compelling content designed to inspire, engage, and elevate your brand."
+                    paragraph="If you're building something serious and need content that reflects that let's talk. No pitching, no packages. Just a focused conversation about what you're trying to do."
                 />
             </HeadingContentContainer>
 
@@ -34,93 +28,79 @@ export const Contact = () => {
                 "card-lg:grid-cols-2 card-lg:w-6xl card-lg:px-8")}>
 
 
-                {/* Card 1 */}
-                <CardContentContainer className={cn("bg-bg-primary border-border-default border-y",
-                    "card-lg:border-r card-lg:border-y"
-                )}>
 
-                    <div className={cn("py-4 px-2",
-                        "card-md:px-6 card-md:text-center",
-                        "card-lg:text-start")
-                    }>
-                        <h2 className={cn("text-md font-semibold text-text-primary",
-                            "card-md:text-base",
-                            "card-lg:text-lg"
-                        )}>
-                            {head.heading}
-                        </h2>
-                        <p className={cn("text-xs pt-1 text-text-secondary card-md:text-sm")}>{head.subHeading}</p>
-                    </div>
+                {
+                    bannerCardsData.map((card) => (
+                        <CardContentContainer
+                            key={card.id}
+                            className={cn(
+                                "bg-bg-primary border-border-default border-b overflow-hidden",
+                                card.id === 1 && "card-lg:border-r card-lg:border-y",
+                                card.id === 2 && "card-lg:border-y"
+                            )}
+                        >
+                            {/* Heading */}
+                            <div
+                                className={cn(
+                                    "py-4 px-2",
+                                    "card-md:px-6 card-md:text-center",
+                                    "card-lg:text-start"
+                                )}
+                            >
+                                <h2
+                                    tabIndex={0}
+                                    aria-describedby="meeting-desc"
+                                    className={cn(
+                                        "text-md font-semibold text-text-primary",
+                                        "card-md:text-base",
+                                        "card-lg:text-lg"
+                                    )}
+                                >
+                                    {card.head.heading}
+                                </h2>
 
+                                <p id="meeting-desc" className="text-xs pt-1 text-text-secondary card-md:text-sm">
+                                    {card.head.subHeading}
+                                </p>
+                            </div>
 
-                    <div className={cn("flex flex-row gap-2 items-center", "text-left py-2 px-2 ",
-                        "card-md:px-6 card-md:justify-center",
-                        "card-lg:justify-start")
-                    }>
+                            {/* CTA */}
+                            <div
+                                className={cn(
+                                    "flex flex-row gap-2 items-center text-left py-2 px-2",
+                                    "card-md:px-6 card-md:justify-center",
+                                    "card-lg:justify-start"
+                                )}
+                            >
+                                <Link to={card.route}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${card.cta.text}, only ${card.cta.steps}, opens in new page`}>
+                                    <Button text={card.cta.text} varient="dark" />
+                                </Link>
 
+                                <p aria-hidden="true" className="text-text-secondary text-xs">
+                                    {card.cta.steps}
+                                </p>
+                            </div>
 
-                        <Link to={"/bookameetingform"}>
-                            <Button text={cta.text} varient="dark" />
-                        </Link>
-
-
-                        <p className="text-text-secondary text-xs">{cta.steps}</p>
-                    </div>
-
-
-                    <BannerContainer>
-                        <BookAMeeting featuresdata={features} />
-                    </BannerContainer>
-
-                </CardContentContainer >
-
-                {/* card 2 */}
-                <CardContentContainer className={cn("bg-bg-primary overflow-hidden border-border-default border-b",
-                    "card-md:border-b",
-                    "card-lg:border-y"
-                )}>
-
-                    <div className={cn("py-4 px-2",
-                        "card-md:px-6 card-md:text-center",
-                        "card-lg:text-start")
-                    }>
-                        <h2 className={cn("text-md font-semibold text-text-primary",
-                            "card-md:text-base",
-                            "card-lg:text-lg"
-                        )}>
-                            {askHead.heading}
-                        </h2>
-                        <p className={cn("text-xs pt-1 text-text-secondary card-md:text-sm")}>{askHead.subHeading}</p>
-                    </div>
-
-                    <div className={cn("flex flex-row gap-2 items-center", "text-left py-2 px-2 ",
-                        "card-md:px-6 card-md:justify-center",
-                        "card-lg:justify-start")
-                    }>
-                        <Link to={"/contactform"} className="inline-block">
-                            <Button
-                                text={askCta.text}
-                                varient="dark"
-                            />
-                        </Link>
-                        <p className="text-text-secondary text-xs">{askCta.steps}</p>
-                    </div>
-
-                    <BannerContainer>
-                        <AskAQuestion featuresQuestiondata={askFeatures} />
-                    </BannerContainer>
-
-                </CardContentContainer >
-
+                            {/* Features */}
+                            <BannerContainer>
+                                {card.id === 1 ? (
+                                    <BookAMeeting featuresdata={card.features} />
+                                ) : (
+                                    <AskAQuestion featuresQuestiondata={card.features} />
+                                )}
+                            </BannerContainer>
+                        </CardContentContainer>
+                    ))
+                }
 
             </CardContainer >
 
-
             <TopCornorBox />
 
-            {/* <BottomCornorBox /> */}
-
-        </div >
+        </section >
     )
 }
 

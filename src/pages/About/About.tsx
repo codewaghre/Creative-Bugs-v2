@@ -1,7 +1,6 @@
-import { MainContentContainer } from "@/components/Common"
-import { AboutPage } from "../Home/Sections/About"
-import { Team } from "./Sections/Team"
-import Service from "./Sections/Service"
+import { MainContentContainer } from "@/components/Common/index"
+
+import { AboutPage, Service, Team } from "@pages/index"
 
 
 export const About = () => {

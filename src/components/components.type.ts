@@ -15,12 +15,14 @@ export type HeadingProps = {
   heading: string;
   varient?: theme;
   paragraph?: string;
+  as?: "h1" | "h2" | "h3";
 };
 
 export type CardHeadingProps = {
   className?: string;
   heading: string;
   paragraph: string;
+  id?: number | string;
 };
 
 export interface TimelineBlockProps {

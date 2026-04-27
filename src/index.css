@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* Backgrounds */
     --bg-primary: hsl(0 0% 100%);
@@ -188,6 +192,23 @@
     /* linears */
     --bg-surface-gradient-1: var(--linear-1);
     --bg-surface-gradient-2: var(--linear-2);
+}
+
+
+
+.calendly-inline-widget [role="button"] {
+    background: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+    border: 1px solid var(--border-default) !important;
+    border-radius: 10px !important;
+}
+
+.calendly-inline-widget button,
+.calendly-inline-widget ._button {
+    background: var(--btn-primary-bg) !important;
+    color: var(--btn-primary-text) !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
 }
 
 

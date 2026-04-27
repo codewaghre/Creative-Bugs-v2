@@ -17,6 +17,12 @@ export { QuotationLeft } from "@/assets/svg/Incos";
 export { QuotationRight } from "@/assets/svg/Incos";
 export { OnlineIcon } from "@/assets/svg/Incos";
 export { LoveIcon } from "@/assets/svg/Incos";
+export { FilmIcon } from "@/assets/svg/Incos";
+export { PodcastIcon } from "@/assets/svg/Incos";
+export { MobileIcon } from "@/assets/svg/Incos";
+export { HandshakeIcon } from "@/assets/svg/Incos";
+export { UpArrowIcon } from "@/assets/svg/Incos";
+export { ProfileIcon } from "@/assets/svg/Incos";
 
 // Socials Icons
 export { LinkedInIcon } from "@/assets/svg/Socials";

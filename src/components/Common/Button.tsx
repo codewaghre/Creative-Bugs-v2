@@ -9,7 +9,6 @@ export const Button = ({ text, icon, className, varient, textLight, iconPosition
     return (
         <>
             <button
-
                 className={cn(
                     "font-semibold text-xs px-5 py-2 rounded-lg flex items-center justify-center gap-2 cursor-pointer h-9",
                     varient === "dark" ? "bg-btn-primary-bg text-btn-primary-text" : "bg-btn-secondary-bg text-btn-secondary-text border border-border-default",

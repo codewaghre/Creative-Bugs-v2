@@ -1,17 +1,22 @@
 
-import reelOnevideo from "/videos/reel/r1.mp4"
-import reelOne from "../../assets/banner/reelone.png"
 
-export const ReelVideo = () => {
+type shortsVideoProps = {
+
+    link: string;
+    thumbnail?: string
+
+}
+
+export const ReelVideo = ({ link }: shortsVideoProps) => {
 
     return (
 
         <div className="aspect-9/16 w-full max-w-sm overflow-hidden rounded-lg bg-black">
             <video
-                src={reelOnevideo}
+                src={link}
                 className="w-full h-full object-cover"
                 controls
-                poster={reelOne}
+            // poster={thumbnail ? thumbnail : reelOne}
             />
         </div>
     )

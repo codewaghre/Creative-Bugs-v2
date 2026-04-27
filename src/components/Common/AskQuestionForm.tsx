@@ -1,17 +1,17 @@
 import { cn } from '@/lib/cn'
 import { useEffect } from 'react'
-
-import { Heading } from '@/components/Common'
-import { HeadingContentContainer, MainContentContainer } from '@components/Common'
-import { TopCornorBox } from '@components/Common'
-import { BottomCornorBox } from '@components/Common'
-
 import { useForm } from "react-hook-form";
-
 import { zodResolver } from "@hookform/resolvers/zod";
+
+import { Heading, HeadingContentContainer, MainContentContainer, TopCornorBox, BottomCornorBox } from '@/components/Common/index'
+
 import { questionSchema } from "@/schema/question.schema";
 import type { QuestionFormData } from "@/schema/question.schema";
 
+import toast from 'react-hot-toast'
+
+
+const acceskey = import.meta.env.VITE_WEB3FORMS_KEY;
 
 export const AskQuestionForm = () => {
 
@@ -25,18 +25,27 @@ export const AskQuestionForm = () => {
     });
 
     const onSubmit = async (data: QuestionFormData) => {
-        console.log("Form Data:", data);
 
-        // Example API call
-        await fetch("/api/questions", {
+
+
+        const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Accept: "application/json",
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify({
+                access_key: acceskey,
+                ...data,
+            }),
         });
 
-        reset();
+        const result = await response.json();
+
+        if (result.success) {
+            toast.success('Successfully Sent')
+            reset();
+        }
     };
 
     useEffect(() => {

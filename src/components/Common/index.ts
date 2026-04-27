@@ -1,3 +1,9 @@
+export { AskQuestionForm } from "@components/Common/AskQuestionForm";
+export { BookAMeetingFrom } from "@components/Common/BookAMeetingFrom";
+
+export { PodcastVideo } from "@components/Common/PodcastVideo";
+export { ReelVideo } from "@components/Common/ReelVideo";
+
 export { LogoContainer } from "@components/Common/Wrapper";
 export { NavLinksContainer } from "@components/Common/Wrapper";
 export { NavbarMainContainer } from "@components/Common/Wrapper";

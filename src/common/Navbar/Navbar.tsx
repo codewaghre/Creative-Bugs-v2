@@ -1,63 +1,45 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 import { Link } from "react-router-dom"
-import { useTheme } from "@/hooks/useTheme"
+
 import { cn } from "@/lib/cn"
 
 import type { NavbarProps } from "../common.type"
 
-import { DarkThemeIcon, LightThemeIcon, SidebarIcon } from "@/assets/index"
+import { SidebarIcon } from "@/assets/index"
 import { LogoContainer, NavbarContainer, NavLinksContainer } from "@/components/Common/index"
 import { Button } from "@/components/Common/index"
 import { Logo } from "@/assets/index"
 import { MobileNavbar } from "./MobileNavbar"
+import { useIsDesktop } from "@/hooks/useIsDesktop"
+
 
 
 
 export const Navbar = ({ isMobileNavOpen, setIsMobileNavOpen }: NavbarProps) => {
-
-    const { theme, toggleTheme } = useTheme()
 
     // toogle mobile navigation menu [true - false]
     const toggleMobileNav = () => {
         setIsMobileNavOpen(prev => !prev)
     }
 
-    // check screen sixe [less than 550px]
-    const useIsDesktop = () => {
-        const [isDesktop, setIsDesktop] = useState(
-            window.innerWidth >= 550 // nav - lg breakpoint
-        )
 
-        useEffect(() => {
-            const handler = () => setIsDesktop(window.innerWidth >= 550)
-            window.addEventListener("resize", handler)
-            return () => window.removeEventListener("resize", handler)
-        }, [])
 
-        return isDesktop
-    }
+    const isDesktop = useIsDesktop(550);
 
-    const isDesktop = useIsDesktop()
-
-    // check if [isDesktop] is  greater than 550px  [close mobile nav]
     useEffect(() => {
         if (isDesktop) {
-            setIsMobileNavOpen(false)
+            setIsMobileNavOpen(false);
         }
+    }, [isDesktop, setIsMobileNavOpen]);
 
-        // prevent srcolling when mobile nav is open
-        if (isMobileNavOpen) {
-            document.body.style.overflow = "hidden"
-        } else {
-            document.body.style.overflow = ""
-        }
+    useEffect(() => {
+        document.body.style.overflow = isMobileNavOpen ? "hidden" : "";
 
         return () => {
-            document.body.style.overflow = ""
-        }
-
-    }, [isDesktop, setIsMobileNavOpen, isMobileNavOpen])
+            document.body.style.overflow = "";
+        };
+    }, [isMobileNavOpen]);
 
 
     return (
@@ -65,8 +47,11 @@ export const Navbar = ({ isMobileNavOpen, setIsMobileNavOpen }: NavbarProps) => 
             <NavbarContainer>
 
                 <LogoContainer>
-                    <Link to={"/"} className={cn("flex items-center justify-center gap-1 font-semibold")}>
-                        <div>
+                    <Link
+                        to={"/"}
+                        aria-label="Go to CreativeBugs homepage"
+                        className={cn("flex items-center justify-center gap-1 font-semibold")}>
+                        <div aria-hidden="true">
                             <Logo />
                         </div>
                         <span>CreativeBugs</span>
@@ -74,23 +59,27 @@ export const Navbar = ({ isMobileNavOpen, setIsMobileNavOpen }: NavbarProps) => 
                 </LogoContainer>
 
                 <NavLinksContainer>
-                    <Link to={"/work"} className={cn("hover:text-text-primary hidden nav-lg:block")}>
+                    <Link
+                        aria-label="View our work"
+                        to={"/work"}
+                        className={cn("hover:text-text-primary hidden nav-lg:block")}>
                         Work
                     </Link>
 
-                    <Link to={"/about"} className={cn("hover:text-text-primary hidden nav-lg:block")}>
+                    <Link
+                        aria-label="Learn about us"
+                        to={"/about"}
+                        className={cn("hover:text-text-primary hidden nav-lg:block")}>
                         About
                     </Link>
 
 
-                    <button
-                        onClick={toggleTheme}
-                        className={cn("hover:text-text-primary")}>
-                        {theme === "light" ? <DarkThemeIcon className="w-4 h-4" /> : <LightThemeIcon className="w-4 h-4" />}
-                    </button>
 
                     <button
-
+                        type="button"
+                        aria-label={isMobileNavOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isMobileNavOpen}
+                        aria-controls="mobile-navigation"
                         onClick={toggleMobileNav}
                         className={cn(
                             "hover:text-text-primary block nav-lg:hidden",
@@ -99,7 +88,9 @@ export const Navbar = ({ isMobileNavOpen, setIsMobileNavOpen }: NavbarProps) => 
                     </button>
 
 
-                    <Link to={"/call"}
+                    <Link
+                        aria-label="Book a meeting"
+                        to={"/call"}
                         className={cn("hidden nav-lg:block")}
                     >
                         <Button
@@ -107,11 +98,6 @@ export const Navbar = ({ isMobileNavOpen, setIsMobileNavOpen }: NavbarProps) => 
                             varient={"dark"}
                         />
                     </Link>
-
-
-
-
-
                 </NavLinksContainer>
 
                 {isMobileNavOpen && (

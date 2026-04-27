@@ -20,7 +20,7 @@ export const MobileNavbar = ({ setIsMobileNavOpen }: MobileNavbarProps) => {
 
     return (
         <>
-            <div className="absolute right-0 top-12 z-100 w-screen h-[calc(100dvh-2.5rem)] bg-bg-primary">
+            <div id="mobile-navigation" className="absolute right-0 top-12 z-100 w-screen h-[calc(100dvh-2.5rem)] bg-bg-primary">
                 <MobileNavLinkContainer>
                     {/* top part */}
                     <MobileNavbarContentContainer className="px-3 py-4 border-y border-border-default">

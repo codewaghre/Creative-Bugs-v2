@@ -75,18 +75,6 @@ export type BannerHead = {
   subHeading: string;
 };
 
-// Common button structure
-export type BannerButton = {
-  text: string;
-  steps: string;
-};
-
-export type ContactActionBanner = {
-  head: BannerHead;
-  cta: BannerButton;
-  features: FeatureItem[];
-};
-
 //end
 
 //FAQ's Section

@@ -5,10 +5,22 @@ import { motion } from "motion/react"
 
 
 export const Heading = ({ heading, paragraph, varient }: HeadingProps) => {
+
+    const headingId =
+        heading.toLowerCase().replace(/\s+/g, "-") + "-heading";
+
+    const paragraphId =
+        heading.toLowerCase().replace(/\s+/g, "-") + "-description";
+
     return (
 
-        <>
+        <div
+            role="group"
+            aria-labelledby={headingId}
+            aria-describedby={paragraphId}>
             <motion.h1
+                id={headingId}
+                tabIndex={0}
                 initial={{ opacity: 0, y: 10, filter: "blur(2px)" }}
                 whileInView={{
                     opacity: 1,
@@ -26,6 +38,8 @@ export const Heading = ({ heading, paragraph, varient }: HeadingProps) => {
             </motion.h1>
 
             <motion.p
+                id={paragraphId}
+                tabIndex={0}
                 initial={{ opacity: 0, y: 10, filter: "blur(2px)" }}
                 whileInView={{
                     opacity: 1,
@@ -40,7 +54,7 @@ export const Heading = ({ heading, paragraph, varient }: HeadingProps) => {
                 )}>
                 {paragraph}
             </motion.p>
-        </>
+        </div>
 
     )
 }

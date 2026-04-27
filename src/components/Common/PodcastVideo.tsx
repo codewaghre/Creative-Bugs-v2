@@ -1,21 +1,27 @@
 
-import thumbnailOne from "@assets/banner/thumbnailOne.png"
-import podcastOne from "/videos/podcast/p1.mp4"
 
+type podcastVideoProps = {
 
-export const PodcastVideo = () => {
+    link: string;
+    thumbnail?: string
+
+}
+
+export const PodcastVideo = ({ link }: podcastVideoProps) => {
+
+    const getEmbedUrl = (url: string) => {
+        const videoId = url.split("v=")[1];
+        return `https://www.youtube.com/embed/${videoId}`;
+    };
 
     return (
         <div className="aspect-video rounded-lg overflow-hidden relative">
-            <video
-                src={podcastOne}
-                width="100%"
-                height="100%"
-                className="w-full h-full object-cover"
-                controls
-                poster={thumbnailOne}
+            <iframe
+                src={getEmbedUrl(link)}
+                className="w-full h-full"
+                allowFullScreen
+                title="Podcast Video"
             />
-
         </div>
     );
 };

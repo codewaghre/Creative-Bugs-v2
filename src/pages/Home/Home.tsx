@@ -1,10 +1,5 @@
 import { MainContentContainer } from "@/components/Common/index"
-import { Hero } from "@pages/index"
-import { Growth } from "@pages/index"
-import { WorkFlow } from "@pages/index"
-import { Contact } from "@pages/index"
-import { FAQ } from "@pages/index"
-import { AboutPage } from "@pages/index"
+import { Hero, Growth, WorkFlow, Contact, FAQ, AboutPage } from "@pages/index"
 
 
 export const Home = () => {

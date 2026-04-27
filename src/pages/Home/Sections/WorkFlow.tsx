@@ -2,19 +2,18 @@
 import { cn } from "@/lib/cn"
 
 import { BannerContainer, CardBannerContentContainer, CardContainer, CardContentContainer, CardHeading, Heading, HeadingContentContainer, TopCornorBox } from "@/components/Common/index";
-import { PreProductionContent, StrategicContent, PostProductionContent } from "@/components/WorkflowCard";
 
-
+import { PreProductionContent, StrategicContent, PostProductionContent } from "@/components/WorkflowCard/index";
 
 
 export const WorkFlow = () => {
     return (
-        <div className={cn("border-t border-x border-border-default relative")}>
+        <section id="workflow" className={cn("border-t border-x border-border-default relative")}>
 
             <HeadingContentContainer>
                 <Heading
                     heading="Our Creative Workflow"
-                    paragraph="A clear, repeatable system that turns ideas into high-performing content consistently, across formats and platforms" />
+                    paragraph="Most agencies make you manage the process. We don't. Here's what it looks like when you hand it over to us." />
             </HeadingContentContainer>
 
             <CardContainer className={cn("grid grid-cols-1 place-items-center gap-4 mx-auto px-3 w-full pb-20",
@@ -39,7 +38,7 @@ export const WorkFlow = () => {
 
                     <CardHeading
                         heading="Strategic Content Planning"
-                        paragraph="Every great video starts with a strong plan. We understand your brand, audience, and goals"
+                        paragraph="We specialize in crafting effective content strategies that drive your brand forward. Our careful planning ensures your content resonates with your audience and achieves your goals"
                     />
 
                 </CardContentContainer>
@@ -58,7 +57,9 @@ export const WorkFlow = () => {
                     </CardBannerContentContainer>
 
 
-                    <CardHeading className="z-40 bg-bg-primary  relative" heading="Strategic Content Planning" paragraph="Every great video starts with a strong plan. We understand your brand, audience, and goals" />
+                    <CardHeading className="z-40 bg-bg-primary  relative"
+                        heading="Pre Production & Execution Planning"
+                        paragraph="Turning your ideas into engaging visual stories. Our skilled team handles every step, from planning to shooting in the studio or on location, creating high-quality videos that connect with your audience" />
 
                 </CardContentContainer>
 
@@ -73,10 +74,12 @@ export const WorkFlow = () => {
                     <div className={cn("flex flex-col justify-between items-start text-left gap-2 z-40 relative",
                         "card-lg:w-200"
                     )}>
-                        <CardHeading className="z-40  bg-bg-primary relative" heading="Strategic Content Planning" paragraph="Every great video starts with a strong plan. We understand your brand, audience, and goals" />
+                        <CardHeading className="z-40  bg-bg-primary relative"
+                            heading="Post Production Content Planning"
+                            paragraph="We transform raw footage into captivating videos that elevate your brand. Our skilled editors enhance visuals, perfect sound quality, and add dynamic effects to ensure every frame aligns with your vision. Whether it's a promotional video or a social media Content" />
 
-                        <div>
-                            <p className={cn("text-xs px-5 pb-5", "card-md:px-6",)}>Get your content delivery with in <span className="text-text-head-two font-semibold"> 48 - 72 hrs</span></p>
+                        <div >
+                            <p tabIndex={0} aria-label="Get your content delivery with in 48 - 72 hrs" className={cn("text-xs px-5 pb-5", "card-md:px-6",)}>Get your content delivery with in <span className="text-text-head-two font-semibold"> 48 - 72 hrs</span></p>
                         </div>
                     </div>
 
@@ -93,16 +96,12 @@ export const WorkFlow = () => {
 
                     </CardBannerContentContainer>
 
-
-
                 </CardContentContainer>
-
 
             </CardContainer>
 
-
             <TopCornorBox />
-        </div >
+        </section >
     )
 }
 

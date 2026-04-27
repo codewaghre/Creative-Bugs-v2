@@ -1,10 +1,7 @@
 
 import { cn } from '@/lib/cn'
 
-import { HeadingContentContainer, MainContentContainer } from '@components/Common'
-import { Heading } from '@components/Common'
-import { TopCornorBox } from '@components/Common'
-import { BottomCornorBox } from '@components/Common'
+import { HeadingContentContainer, MainContentContainer, Heading, TopCornorBox, BottomCornorBox } from '@components/Common'
 
 
 export const BookAMeetingFrom = () => {
@@ -17,8 +14,16 @@ export const BookAMeetingFrom = () => {
                 </HeadingContentContainer>
             </div>
 
-            <div className={cn("pb-20 px-4",)}>
+            <div className={cn("",)}>
 
+                <iframe
+                    src="https://calendly.com/ops-creativebugs/30min?month=2026-04&date=2026-04-23&primary_color=111827&text_color=1f2937&background_color=ffffff"
+                    width="100%"
+                    height="750"
+                    frameBorder="0"
+                    title="Calendly Booking"
+                    className="w-full">
+                </iframe>
             </div>
 
             <TopCornorBox />

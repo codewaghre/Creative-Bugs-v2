@@ -1,10 +1,13 @@
-import { Route, Routes } from "react-router-dom"
-import { About, Home, Work } from "@pages/index"
-import { MainLayout } from "@common/index"
-import { AskQuestionForm } from "./components/Common/AskQuestionForm"
-import { BookAMeetingFrom } from "./components/Common/BookAMeetingFrom"
 import Lenis from "lenis"
 import { useEffect } from "react"
+import { Route, Routes } from "react-router-dom"
+
+
+import { About, CookiePolicy, Home, PrivacyPolicy, TermsOfService, Work } from "@pages/index"
+import { MainLayout } from "@common/index"
+import { AskQuestionForm } from "./components/Common/index"
+import { BookAMeetingFrom } from "./components/Common/index"
+
 
 
 
@@ -39,6 +42,10 @@ function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/contactform" element={<AskQuestionForm />} />
           <Route path="/bookameetingform" element={<BookAMeetingFrom />} />
+          <Route path="/cookiepolicy" element={<CookiePolicy />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/termsofservice" element={<TermsOfService />} />
+
         </Route>
 
       </Routes>

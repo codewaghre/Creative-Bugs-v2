@@ -12,7 +12,9 @@
       "@components/*": ["./src/components/*"],
       "@assets/*": ["./src/assets/*"],
       "@lib/*": ["./src/lib/*"],
-      "@schema": ["./src/schema/*"]
+      "@schema": ["./src/schema/*"],
+      "@data": ["./src/data/*"]
+  
     },
 
     /* Bundler mode */

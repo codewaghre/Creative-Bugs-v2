@@ -1,4 +1,4 @@
-import { BottomCornorBox, Heading, HeadingContentContainer, TopCornorBox } from "@/components/Common"
+import { BottomCornorBox, Heading, HeadingContentContainer, TopCornorBox } from "@/components/Common/index"
 import { cn } from "@/lib/cn"
 
 
@@ -6,11 +6,11 @@ import { cn } from "@/lib/cn"
 export const WorkHome = () => {
     return (
 
-        <div className={cn("border-t border-x border-border-default relative")}>
+        <div className={cn("border-t border-x border-border-default relative mt-1")}>
 
             <div className="pb-1">
                 <HeadingContentContainer>
-                    <Heading heading="Meet Creative Teamss" paragraph="We help founders build trust and authority through strategic video content  not just visuals, but results." />
+                    <Heading heading="Meet Creative Teams" paragraph="Explore the projects where creativity, strategy, and storytelling come together to deliver impactful results." />
                 </HeadingContentContainer>
             </div>
 
