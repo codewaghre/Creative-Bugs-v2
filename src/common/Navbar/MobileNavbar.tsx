@@ -27,11 +27,11 @@ export const MobileNavbar = ({ setIsMobileNavOpen }: MobileNavbarProps) => {
                     <div className="grid grid-cols-3 gap-y-4 text-sm">
                         <Link to="/work" onClick={handleClose}>Work</Link>
                         <Link to="/about" onClick={handleClose}>About</Link>
-                        <Link to="/team" onClick={handleClose}>Team</Link>
-                        <Link to="/service" onClick={handleClose}>Service</Link>
-                        <Link to="/growth" onClick={handleClose}>Growth</Link>
-                        <Link to="/faq" onClick={handleClose}>FAQ's</Link>
-                        <Link to="/workflow" onClick={handleClose}>Workflow</Link>
+                        <a href="/about/#team" onClick={handleClose}>Team</a>
+                        <a href="/#service" onClick={handleClose}>Service</a>
+                        <a href="/#growth" onClick={handleClose}>Growth</a>
+                        <a href="/#faq" onClick={handleClose}>FAQ's</a>
+                        <a href="/#workflow" onClick={handleClose}>Workflow</a>
                     </div>
                 </MobileNavbarContentContainer >
 
@@ -57,21 +57,21 @@ export const MobileNavbar = ({ setIsMobileNavOpen }: MobileNavbarProps) => {
                     </SocialIconContainer>
 
                     <ButtonContainer>
-                        <div className="">
+                        <Link to="/bookameetingform">
                             <Button
                                 text="Book a Call"
                                 varient="dark"
                                 className="w-full"
                             />
-                        </div>
+                        </Link>
 
-                        <div className="">
+                        <Link to="/contactform">
                             <Button
                                 text="Book a Meeting"
                                 varient="light"
                                 className="w-full"
                             />
-                        </div>
+                        </Link>
                     </ButtonContainer>
                 </MobileNavbarContentContainer>
             </MobileNavLinkContainer>

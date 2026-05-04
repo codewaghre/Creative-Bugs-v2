@@ -90,7 +90,7 @@ export const Navbar = ({ isMobileNavOpen, setIsMobileNavOpen }: NavbarProps) => 
 
                     <Link
                         aria-label="Book a meeting"
-                        to={"/call"}
+                        to={"/bookameetingform"}
                         className={cn("hidden nav-lg:block")}
                     >
                         <Button

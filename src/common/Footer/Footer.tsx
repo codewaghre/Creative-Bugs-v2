@@ -64,13 +64,16 @@ export const Footer = () => {
                         </h3>
 
                         <ul className="flex flex-col text-text-white-50 items-start gap-6 text-xs card-md:text-sm card-lg:text-base">
+
+
+                            <li><a href="#growth">Growth</a></li>
+                            <li><a href="/#workflow">Workflow</a></li>
+                            <li><a href="/about#service">Services</a></li>
+                            <li><a href="/#faq">FAQs</a></li>
                             <li><Link to="/work">Work</Link></li>
                             <li><Link to="/about">About</Link></li>
                             <li><Link to="/about/#team">Team</Link></li>
-                            <li><a href="#growth">Growth</a></li>
-                            <li><a href="/about#service">Services</a></li>
-                            <li><a href="/#faq">FAQs</a></li>
-                            <li><a href="/#workflow">Workflow</a></li>
+
                         </ul>
                     </nav>
 
