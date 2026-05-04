@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block non-important pages
+Disallow: /cookiepolicy
+Disallow: /privacypolicy
+Disallow: /termsofservice
+
+Sitemap: https://creativebugsmedia.com/sitemap.xml
