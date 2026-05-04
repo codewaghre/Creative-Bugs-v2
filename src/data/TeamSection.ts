@@ -40,7 +40,7 @@ export const teamData: TeamMember[] = [
     role: "Head of Branding & Content Strategy",
     image:
       "https://ik.imagekit.io/creativebugs/Short%20Videos/Avatar%20/yash_s.webp?updatedAt=1776689002801",
-    profileLink: "/",
+    profileLink: "",
   },
 
   {
@@ -49,7 +49,7 @@ export const teamData: TeamMember[] = [
     role: "Video Editor",
     image:
       "https://ik.imagekit.io/creativebugs/Short%20Videos/Avatar%20/swapnil.webp?updatedAt=1776689002849",
-    profileLink: "/",
+    profileLink: "",
   },
 
   {

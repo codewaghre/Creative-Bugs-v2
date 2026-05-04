@@ -81,7 +81,7 @@ export const brandgridOne: BrandItem[] = [
     alt: "Alyf logo",
   },
   {
-    id: 6,
+    id: 15,
     src: "https://ik.imagekit.io/creativebugs/Short%20Videos/Client%20logo/emsme_LG3.webp?updatedAt=1776689048081",
     alt: "Emsme logo",
   },

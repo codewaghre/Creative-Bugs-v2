@@ -6,7 +6,7 @@ import { cn } from "@/lib/cn"
 export const WorkHome = () => {
     return (
 
-        <div className={cn("border-t border-x border-border-default relative mt-1")}>
+        <div className={cn("border-t border-x border-border-default relative mt-0 card-md:mt-1")}>
 
             <div className="pb-1">
                 <HeadingContentContainer>

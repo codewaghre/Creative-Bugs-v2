@@ -14,7 +14,7 @@ import type { ContainerProps } from "@/components/components.type"
 export const Hero = () => {
 
     return (
-        <section id="hero" className="relative pt-24 border-x  border-border-default bg-bg-primary mt-1">
+        <section id="hero" className="relative pt-24 border-x  border-border-default bg-bg-primary mt-0 card-md:mt-1">
             <div>
                 {/* Hero Container */}
                 <HeroContainer>

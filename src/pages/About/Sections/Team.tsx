@@ -46,6 +46,7 @@ export const Team = () => {
                             <Link
                                 key={member.id}
                                 to={member.profileLink}
+                                target="_blank"
                                 className="overflow-hidden rounded-sm hover:border border-border-default block"
                             >
                                 {Card}

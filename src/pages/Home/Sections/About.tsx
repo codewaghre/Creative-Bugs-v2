@@ -12,7 +12,7 @@ import { AboutData } from "@/data/index"
 export const AboutPage = () => {
 
     return (
-        <section id="about" className={cn("border-t border-x border-border-default relative bg-bg-primary mt-1")}>
+        <section id="about" className={cn("border-t border-x border-border-default relative bg-bg-primary mt-0 card-md:mt-1")}>
 
             <TopCornorBox />
 

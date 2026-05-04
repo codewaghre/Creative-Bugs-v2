@@ -135,7 +135,7 @@ export const creatorDataList: CreatorSectionData[] = [
       },
 
       {
-        id: 1,
+        id: 2,
         type: "short",
         title: "Money Mindset Short",
         views: "121K views",
@@ -144,7 +144,7 @@ export const creatorDataList: CreatorSectionData[] = [
       },
 
       {
-        id: 1,
+        id: 3,
         type: "short",
         title: "Money Mindset Short",
         views: "121K views",
@@ -200,7 +200,7 @@ export const creatorDataList: CreatorSectionData[] = [
       },
 
       {
-        id: 1,
+        id: 2,
         type: "short",
         title: "Money Mindset Short",
         views: "121K views",
@@ -209,7 +209,7 @@ export const creatorDataList: CreatorSectionData[] = [
       },
 
       {
-        id: 1,
+        id: 3,
         type: "short",
         title: "Money Mindset Short",
         views: "121K views",
@@ -265,7 +265,7 @@ export const creatorDataList: CreatorSectionData[] = [
       },
 
       {
-        id: 1,
+        id: 2,
         type: "short",
         title: "Money Mindset Short",
         views: "121K views",
@@ -274,7 +274,7 @@ export const creatorDataList: CreatorSectionData[] = [
       },
 
       {
-        id: 1,
+        id: 3,
         type: "short",
         title: "Money Mindset Short",
         views: "121K views",
