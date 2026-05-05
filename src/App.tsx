@@ -45,9 +45,7 @@ function App() {
           <Route path="/cookiepolicy" element={<CookiePolicy />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/termsofservice" element={<TermsOfService />} />
-
         </Route>
-
       </Routes>
     </>
   )
