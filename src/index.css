@@ -157,7 +157,6 @@ html {
     --breakpoint-laptop: 1024px;
 
 
-
     --animate-orbit: orbit var(--duration) linear infinite;
 
     --animate-shine: shine 2s infinite;
@@ -181,12 +180,6 @@ html {
             left: "125%"
         }
     }
-
-
-
-
-
-
 
 
     /* linears */
@@ -225,7 +218,5 @@ html {
     .bg-surface-gradient-3 {
         background: var(--linear-3);
     }
-
-
 
 }
