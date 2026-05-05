@@ -13,7 +13,6 @@ import { BookAMeetingFrom } from "./components/Common/index"
 
 function App() {
 
-
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.1,
