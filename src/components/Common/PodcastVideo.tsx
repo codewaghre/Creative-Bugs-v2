@@ -10,8 +10,15 @@ type podcastVideoProps = {
 export const PodcastVideo = ({ link }: podcastVideoProps) => {
 
     const getEmbedUrl = (url: string) => {
-        const videoId = url.split("v=")[1];
-        return `https://www.youtube.com/embed/${videoId}`;
+        if (url.includes("youtu.be/")) {
+            return `https://www.youtube.com/embed/${url.split("youtu.be/")[1]}`;
+        }
+
+        if (url.includes("v=")) {
+            return `https://www.youtube.com/embed/${url.split("v=")[1].split("&")[0]}`;
+        }
+
+        return url;
     };
 
     return (
