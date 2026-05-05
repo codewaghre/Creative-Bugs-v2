@@ -10,6 +10,7 @@ import { Button, TopCornorBox } from "@/components/Common/index"
 
 import type { ContainerProps } from "@/components/components.type"
 
+import heroBanner from "/heroBanner.webp"
 
 export const Hero = () => {
 
@@ -106,7 +107,7 @@ export const Hero = () => {
                 <BannerContainer>
                     <img
                         aria-hidden="true"
-                        src="https://ik.imagekit.io/creativebugs/Short%20Videos/Banner/heroBanner.webp"
+                        src={heroBanner ? heroBanner : "https://ik.imagekit.io/creativebugs/Short%20Videos/Banner/heroBanner.webp"}
                         alt="Creative Bugs Media team producing branded video content"
                         tabIndex={0}
                         loading="eager"
