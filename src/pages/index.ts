@@ -3,7 +3,7 @@ export { Service } from "@pages/About/Sections/Service";
 
 export { Home } from "@pages/Home/Home";
 export { Work } from "@pages/Work/Work";
-export { About } from "@pages/About/About";
+// export { About } from "@pages/About/About";
 
 export { Hero } from "@pages/Home/Sections/Hero";
 export { Growth } from "@pages/Home/Sections/Growth";

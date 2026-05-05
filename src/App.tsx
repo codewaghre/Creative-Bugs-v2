@@ -1,12 +1,17 @@
 import Lenis from "lenis"
-import { useEffect } from "react"
+import { lazy, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
 
 
-import { About, CookiePolicy, Home, PrivacyPolicy, TermsOfService, Work } from "@pages/index"
+import { CookiePolicy, Home, PrivacyPolicy, TermsOfService, Work } from "@pages/index"
 import { MainLayout } from "@common/index"
 import { AskQuestionForm } from "./components/Common/index"
 import { BookAMeetingFrom } from "./components/Common/index"
+import LazyWrapper from "./hooks/LazyWrapper"
+
+
+// Lazy Loaded Pages
+const About = lazy(() => import("./pages/About/About"));
 
 
 
@@ -37,7 +42,7 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<LazyWrapper> <About /></LazyWrapper>} />
           <Route path="/work" element={<Work />} />
           <Route path="/contactform" element={<AskQuestionForm />} />
           <Route path="/bookameetingform" element={<BookAMeetingFrom />} />

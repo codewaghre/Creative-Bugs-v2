@@ -4,7 +4,7 @@ import SEO from "@/lib/SEO"
 import { AboutPage, Service, Team } from "@pages/index"
 
 
-export const About = () => {
+const About = () => {
     return (
 
         <>
@@ -26,3 +26,5 @@ export const About = () => {
     )
 }
 
+
+export default About
